@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendUrl: '' // This should be an actual external address to connect to.
 };
