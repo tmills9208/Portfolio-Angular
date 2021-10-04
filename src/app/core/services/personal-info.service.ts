@@ -1,3 +1,4 @@
+import { ApiService } from './api.service';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class PersonalInfoService {
 
-  constructor() { }
+  constructor(private http: ApiService) { }
+
+  getInfo() {
+    return this.http.get('/info');
+  }
 }

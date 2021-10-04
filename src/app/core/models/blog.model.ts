@@ -1,5 +1,5 @@
 export interface Blog {
   title: string,
-  date: string,
-  tags: string
+  date: Date,
+  tags: string[] // id's to find tags with
 }

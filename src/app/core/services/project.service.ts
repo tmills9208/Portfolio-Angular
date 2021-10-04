@@ -2,20 +2,24 @@ import { Observable } from 'rxjs';
 import { Project } from '../models/project.model';
 import { ApiService } from './api.service';
 import { Injectable } from '@angular/core';
-import { JwtService } from '.';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
 
-  constructor(private http: ApiService, private jwt: JwtService) { }
+  constructor(private http: ApiService) { }
 
-  getAll(year: Date) : Observable<Project[]> {
-    return this.http.get('/projects',)
+  getAll() : Observable<Project[]> {
+    return this.http.get('/project').pipe(
+      map(data => data.projects)
+    );
   }
 
   getOne(id: number) : Observable<Project> {
-    return this.http.get('/projects',)
+    return this.http.get(`/project/${id}`).pipe(
+      map(data => data.project)
+    );
   }
 }

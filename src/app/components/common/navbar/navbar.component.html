@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <div class="flex-container">
+    <div class="center-content">
+      <button mat-button class="nav-brand" [routerLink]="''">
+        <h1>
+          .<span [style.margin]="'0 2px'">/</span>tmills9208
+        </h1>
+      </button>
+    </div>
+    <div class="nav-menu center-content">
+      <button mat-raised-button [routerLink]="'projects'">Projects</button>
+      <button mat-raised-button [routerLink]="'blog'">Blog</button>
+    </div>
+    <div>
+      <a mat-icon-button 
+        target="_blank" href="https://www.linkedin.com/in/tmills9208/"
+        >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a mat-icon-button 
+        target="_blank" href="https://github.com/tmills9208"
+        >
+        <i class="fab fa-github"></i>
+      </a>
+      <button mat-button [routerLink]="">
+        <mat-icon [style.marginRight]="'.5em'">email</mat-icon>
+        <mat-icon>phone</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
