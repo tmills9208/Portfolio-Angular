@@ -32,11 +32,11 @@ a.mat-icon-button {
 }
 
 .nav-menu {
-  .mat-raised-button {
+  .mat-button {
     margin-right: 30px;
-    width: 100px;
+    width: 150px;
     // background-color: rgba($color: #fff, $alpha: .5);
-
+    transition: .5s;
     // Generated glassmorphism, https://hype4.academy/tools/glassmorphism-generator
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -45,4 +45,19 @@ a.mat-icon-button {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
+
+  .mat-button.active {
+    // Generated glassmorphism, https://hype4.academy/tools/glassmorphism-generator
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.mat-toolbar {
+  z-index: 1;
 }

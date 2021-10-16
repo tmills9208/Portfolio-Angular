@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { MatComponentsModule } from './../../mat-components.module';
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+
+import { CommonComponentsModule } from './../common/common-components.module';
+import { MatComponentsModule } from './../../mat-components.module';
 
 import { 
   HomePageComponent,
@@ -26,18 +28,19 @@ const config: ExtraOptions = {
 }
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, config),
-    MatComponentsModule, // remove later
-    CommonModule
-  ],
-  exports: [RouterModule],
   declarations: [
     HomePageComponent,
     ProjectsPageComponent,
     ProjectPageComponent,
     BlogPageComponent,
     BlogsPageComponent
-  ]
+  ],
+  imports: [
+    RouterModule.forRoot(routes, config),
+    MatComponentsModule, // remove later(?)
+    CommonModule,
+    CommonComponentsModule
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

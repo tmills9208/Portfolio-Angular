@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   ApiService,
   BlogService,
   ProjectService,
   PersonalInfoService,
-  JwtService
+  JwtService,
+  TagsService
 } from './services'
 
 @NgModule({
@@ -16,10 +18,13 @@ import {
     BlogService,
     ProjectService,
     PersonalInfoService,
-    JwtService
+    JwtService,
+    TagsService
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    HttpClientModule
+  ],
+  exports: []
 })
 export class CoreModule { }

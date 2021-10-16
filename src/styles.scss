@@ -34,9 +34,12 @@ html, body {
   height: 100%; 
   background-color: #333; 
   color: #eee;
-
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+navbar::after(:first) {
+  
+}
 
 .container {
   padding: 20px;
@@ -60,4 +63,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 main {
   margin: 0 10%;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.top-left-0 {
+  top: 0;
+  left: 0
 }

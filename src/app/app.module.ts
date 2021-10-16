@@ -7,14 +7,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { CoreModule } from './core/core.module';
 import { MatComponentsModule } from './mat-components.module';
+import { CommonComponentsModule } from './components/common/common-components.module';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/common/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import { NavbarComponent } from './components/common/navbar/navbar.component';
     CoreModule,
     MatComponentsModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CommonComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
