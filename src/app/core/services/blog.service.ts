@@ -17,7 +17,8 @@ export class BlogService {
       {
         date: new Date(),
         tags: [createSearchTag('')],
-        title: 'Blog '
+        title: 'Blog ',
+        content: ''
       }
     ]
   }
